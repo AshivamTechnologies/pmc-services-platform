@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101d2b" />
+  <title>PMC Services | Project Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginScreen" class="login-screen">
+    <div class="login-art">
+      <div class="brand brand-light"><span class="brand-mark">P</span><span>PMC<span class="brand-muted"> SERVICES</span></span></div>
+      <div class="login-copy">
+        <div class="eyebrow light-eyebrow">PROJECT INTELLIGENCE PLATFORM</div>
+        <h1>Bring every project<br><em>into focus.</em></h1>
+        <p>A considered workspace for people, projects and progress.</p>
+        <div class="login-art-footer"><span>PLAN WITH CLARITY</span><span>·</span><span>DELIVER WITH CONFIDENCE</span></div>
+      </div>
+      <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+    </div>
+    <div class="login-panel">
+      <div class="login-panel-inner">
+        <div class="mobile-brand brand"><span class="brand-mark">P</span><span>PMC<span class="brand-muted"> SERVICES</span></span></div>
+        <div class="eyebrow">WELCOME BACK</div>
+        <h2>Sign in to your workspace</h2>
+        <p class="muted">Choose a demo role to explore its dedicated portal.</p>
+        <form id="loginForm">
+          <label for="roleSelect">Sign in as</label>
+          <div class="select-wrap"><select id="roleSelect"><option value="admin">Administrator</option><option value="manager">Project Manager</option><option value="employee">Employee</option><option value="client">Client</option></select></div>
+          <label for="emailInput">Email address</label>
+          <input id="emailInput" type="email" value="admin@pmc.demo" required />
+          <label for="passwordInput">Password</label>
+          <input id="passwordInput" type="password" value="demo123" required />
+          <button class="btn btn-primary btn-full" type="submit">Enter workspace <span>↗</span></button>
+        </form>
+        <div class="demo-note"><strong>Demo access</strong><span>Any non-empty email and password will work. Select a role to preview its experience.</span></div>
+        <div class="login-legal">PMC SERVICES <span>© 2026</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><span class="brand-mark">P</span><span>PMC<span class="brand-muted"> SERVICES</span></span></div>
+      <div class="workspace-label" id="workspaceLabel">MANAGEMENT OFFICE</div>
+      <nav id="sidebarNav" class="sidebar-nav"></nav>
+      <div class="sidebar-bottom">
+        <div class="support-card"><div class="support-icon">✦</div><strong>Need a hand?</strong><span>Visit the help centre for platform guidance.</span><button id="helpButton" class="text-button">Explore help ↗</button></div>
+        <button class="profile-mini" id="profileButton"><span class="avatar" id="sideAvatar">AJ</span><span class="profile-mini-text"><strong id="sideName">Alex Johnson</strong><small id="sideRole">Administrator</small></span><span class="more">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="mobileMenu" aria-label="Toggle menu">☰</button>
+        <div class="breadcrumb"><span>PMC Services</span><b>/</b><strong id="breadcrumbCurrent">Overview</strong></div>
+        <div class="topbar-actions">
+          <div class="search-box"><span>⌕</span><input id="globalSearch" placeholder="Search anything..." /></div>
+          <button class="icon-button notification-button" id="notificationButton" aria-label="Notifications">♧<i></i></button>
+          <div class="top-user"><span class="avatar" id="topAvatar">AJ</span><span><strong id="topName">Alex Johnson</strong><small id="topRole">Administrator</small></span></div>
+        </div>
+      </header>
+      <section id="pageContent" class="page-content"></section>
+    </main>
+  </div>
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+  <div id="modalRoot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
